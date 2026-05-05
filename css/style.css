@@ -2,22 +2,22 @@
    CSS Variables & Theming
    ========================================= */
 :root {
-    /* Color Palette - Premium Dark Blue & Golden */
-    --primary-color: #fbbf24;    /* Golden */
-    --secondary-color: #f59e0b;  /* Darker Golden */
-    --accent-color: #fbbf24;     /* Golden Accent */
-    --accent-hover: #f59e0b;     /* Golden Hover */
+    /* Color Palette - Refined Blue & Golden */
+    --primary-color: #e6b800;    /* Classic Golden */
+    --secondary-color: #c49b00;  /* Deep Gold */
+    --accent-color: #e6b800;     /* Golden Accent */
+    --accent-hover: #ffd700;     /* Bright Gold Hover */
     
-    --text-main: #f8fafc;        /* Near white for text */
-    --text-light: #94a3b8;       /* Muted slate */
+    --text-main: #ccd6f6;        /* Light blueish-silver for text */
+    --text-light: #8892b0;       /* Muted blue-grey */
     
-    --bg-dark: #020617;          /* Darkest Blue */
-    --bg-light: #0f172a;         /* Deep Slate Blue */
+    --bg-dark: #0a192f;          /* Rich Navy Blue */
+    --bg-light: #112240;         /* Deep Navy Blue */
     
-    --glass-bg: rgba(15, 23, 42, 0.7); /* Translucent Slate */
-    --glass-border: rgba(251, 191, 36, 0.2); /* Golden border */
+    --glass-bg: rgba(17, 34, 64, 0.7); /* Translucent Navy */
+    --glass-border: rgba(230, 184, 0, 0.2); /* Golden border */
     
-    --white: #ffffff;            /* Real white */
+    --white: #ffffff;            /* Pure white */
 
     /* Typography */
     --font-heading: 'Merriweather', serif;

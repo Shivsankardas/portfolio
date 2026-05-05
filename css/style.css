@@ -2,25 +2,22 @@
    CSS Variables & Theming
    ========================================= */
 :root {
-    /* Color Palette - Dark Blue & Golden */
-    --primary-color: #22d3ee; /* Vibrant Cyan */
-    /* Indigo Accent */
-    --secondary-color: #818cf8;
-    /* Darker Indigo */
-    --accent-color: #22d3ee;
-    /* Cyan Accent */
-    --accent-hover: #06b6d4;
-    /* Darker Cyan Hover */
-    --text-main: #E2E8F0;
-    /* Light text for dark backgrounds */
-    --text-light: #94A3B8;
-    /* Muted text */
-    --bg-light: #172554;
-    /* Deep blue for alternate sections */
-    --bg-white: #020617;
-    /* Darkest blue for main background */
-    --white: rgba(15, 23, 42, 0.6);
-    /* Translucent slate for cards */
+    /* Color Palette - Premium Dark Blue & Golden */
+    --primary-color: #fbbf24;    /* Golden */
+    --secondary-color: #f59e0b;  /* Darker Golden */
+    --accent-color: #fbbf24;     /* Golden Accent */
+    --accent-hover: #f59e0b;     /* Golden Hover */
+    
+    --text-main: #f8fafc;        /* Near white for text */
+    --text-light: #94a3b8;       /* Muted slate */
+    
+    --bg-dark: #020617;          /* Darkest Blue */
+    --bg-light: #0f172a;         /* Deep Slate Blue */
+    
+    --glass-bg: rgba(15, 23, 42, 0.7); /* Translucent Slate */
+    --glass-border: rgba(251, 191, 36, 0.2); /* Golden border */
+    
+    --white: #ffffff;            /* Real white */
 
     /* Typography */
     --font-heading: 'Merriweather', serif;
@@ -31,7 +28,6 @@
     --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
-    --ease-in-out-quad: cubic-bezier(0.45, 0, 0.55, 1);
 
     /* Shadows */
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -55,7 +51,7 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--text-main);
-    background-color: var(--bg-white);
+    background-color: var(--bg-dark);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -101,8 +97,8 @@ ol {
 }
 
 .bg-dark {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
 }
 
 .w-100 {
@@ -128,7 +124,7 @@ ol {
 
 .btn-primary {
     background-color: var(--accent-color);
-    color: var(--white);
+    color: var(--bg-dark);
     border: 2px solid var(--accent-color);
 }
 
@@ -147,9 +143,9 @@ ol {
 
 .btn-outline:hover {
     background-color: var(--primary-color);
-    color: var(--bg-white);
+    color: var(--bg-dark);
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
 }
 
 /* Section Titles */
@@ -207,7 +203,7 @@ ol {
 
 .scroll-progress-bar {
     height: 4px;
-    background: var(--accent-color);
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     width: 0%;
 }
 
@@ -297,7 +293,7 @@ ol {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+    background: radial-gradient(circle at top right, var(--bg-light), var(--bg-dark));
     position: relative;
     padding-top: 80px;
     overflow: hidden;
@@ -1060,18 +1056,41 @@ footer {
 
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
 }
 
-.fade-in.appear {
-    opacity: 1;
-    transform: translateY(0);
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
 }
 
-.fade-up.appear {
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.fade-in.appear,
+.fade-up.appear,
+.reveal-left.appear,
+.reveal-right.appear,
+.reveal-scale.appear {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(0, 0) scale(1);
 }
 
 /* Stagger delay classes */

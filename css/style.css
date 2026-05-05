@@ -729,10 +729,11 @@ ol {
 .tabs-container {
     max-width: 900px;
     margin: 0 auto;
-    background-color: var(--white);
+    background-color: var(--bg-light);
     border-radius: 12px;
     box-shadow: var(--shadow-md);
     overflow: hidden;
+    border: 1px solid var(--glass-border);
 }
 
 .tabs-header {
@@ -765,7 +766,7 @@ ol {
 
 .tab-btn.active {
     color: var(--accent-color);
-    background-color: var(--white);
+    background-color: var(--bg-dark);
     border-bottom: 3px solid var(--accent-color);
 }
 
@@ -880,10 +881,10 @@ ol {
 }
 
 .pub-scroll-container {
-    background-color: var(--white);
+    background-color: var(--bg-light);
     border-radius: 12px;
     box-shadow: var(--shadow-md);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--glass-border);
     overflow: hidden;
 }
 
@@ -976,9 +977,10 @@ ol {
 }
 
 .contact-form {
-    background-color: var(--white);
+    background-color: var(--bg-light);
     padding: 40px;
     border-radius: 12px;
+    border: 1px solid var(--glass-border);
 }
 
 .contact-form h3 {
@@ -1221,11 +1223,11 @@ body:hover .cursor-outline {
         right: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: var(--white);
+        background-color: var(--bg-dark);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
         padding: 20px 0;
         z-index: 1001;
     }

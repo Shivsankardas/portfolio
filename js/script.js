@@ -217,7 +217,7 @@ if (typeof particlesJS !== 'undefined') {
                 }
             },
             "color": {
-                "value": "#FACC15"
+                "value": "#22d3ee"
             },
             "shape": {
                 "type": "circle",
@@ -252,7 +252,7 @@ if (typeof particlesJS !== 'undefined') {
             "line_linked": {
                 "enable": true,
                 "distance": 150,
-                "color": "#FACC15",
+                "color": "#22d3ee",
                 "opacity": 0.2,
                 "width": 1
             },

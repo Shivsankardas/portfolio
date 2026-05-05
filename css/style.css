@@ -3,14 +3,14 @@
    ========================================= */
 :root {
     /* Color Palette - Dark Blue & Golden */
-    --primary-color: #FACC15;
-    /* Golden Accent */
-    --secondary-color: #EAB308;
-    /* Darker Gold */
-    --accent-color: #FACC15;
-    /* Golden Accent */
-    --accent-hover: #CA8A04;
-    /* Dark Gold Hover */
+    --primary-color: #22d3ee; /* Vibrant Cyan */
+    /* Indigo Accent */
+    --secondary-color: #818cf8;
+    /* Darker Indigo */
+    --accent-color: #22d3ee;
+    /* Cyan Accent */
+    --accent-hover: #06b6d4;
+    /* Darker Cyan Hover */
     --text-main: #E2E8F0;
     /* Light text for dark backgrounds */
     --text-light: #94A3B8;
@@ -136,7 +136,7 @@ ol {
     background-color: var(--accent-hover);
     border-color: var(--accent-hover);
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
 }
 
 .btn-outline {
@@ -149,7 +149,7 @@ ol {
     background-color: var(--primary-color);
     color: var(--bg-white);
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 20px rgba(250, 204, 21, 0.2);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
 }
 
 /* Section Titles */
@@ -328,7 +328,7 @@ ol {
     left: -10%;
     width: 500px;
     height: 500px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     animation: float-blob 20s infinite alternate var(--ease-in-out-quad);
 }
 
@@ -337,7 +337,7 @@ ol {
     right: -10%;
     width: 400px;
     height: 400px;
-    background: #3b82f6;
+    background: var(--primary-color);
     animation: float-blob 25s infinite alternate-reverse var(--ease-in-out-quad);
 }
 
@@ -439,7 +439,7 @@ ol {
     background-color: var(--accent-color);
     color: var(--bg-white);
     transform: translateY(-5px) rotate(8deg);
-    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.3);
+    box-shadow: 0 10px 20px rgba(34, 211, 238, 0.3);
 }
 
 .hero-buttons {
